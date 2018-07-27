@@ -1,0 +1,10 @@
+---
+- hosts: machine4
+  become: yes
+  tasks:
+    - name: create user
+      user: name=abc uid=1110 state=present shell=/bin/bash home=/home/a
+    - name: create user
+      user: name=xyz uid=1111 state=present shell=/bin/bash home=/home/xyz
+    
+  
